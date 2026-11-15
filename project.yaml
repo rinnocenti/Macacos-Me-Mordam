@@ -1,0 +1,26 @@
+# Configuração inicial do jogo.
+# Preferências de rigor não definidas; seguem a resolução do workspace de desenvolvimento.
+
+schema_version: 1
+
+platform:
+  targets: ["Mobile"]
+  primary_input: "Touch"
+  gamepad_support: "None"
+  touch_support: "Full"
+
+engine:
+  name: "Unity"
+  version: "6000.6.9f1"
+  language: "C#"
+  rendering: "URP"
+  physics: "Unity 2D Physics"
+
+commands:
+  build: "[A configurar após a escolha do alvo móvel]"
+  test: "[A configurar após a criação do projeto Unity]"
+  run: "[A configurar após a criação do projeto Unity]"
+  smoke: "[A configurar após a criação do projeto Unity]"
+
+testing:
+  framework: "nunit"
