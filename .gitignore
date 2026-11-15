@@ -116,3 +116,12 @@ InitTestScene*.unity*
 # Local project and Editor preferences
 project.local.yaml
 /ProjectSettings/Packages/com.unity.ai.assistant/Settings.json
+
+# OS and crash-report files
+.DS_Store
+Thumbs.db
+Desktop.ini
+crashlytics-buildid.txt
+
+# IDE settings
+.idea/
