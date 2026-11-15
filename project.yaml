@@ -18,9 +18,9 @@ engine:
 
 commands:
   build: "[A configurar após a escolha do alvo móvel]"
-  test: "[A configurar após a criação do projeto Unity]"
-  run: "[A configurar após a criação do projeto Unity]"
-  smoke: "[A configurar após a criação do projeto Unity]"
+  test: "[NUnit pretendido; execução a configurar]"
+  run: "[Abrir o projeto Macacos Me Mordam pelo Unity Hub]"
+  smoke: "[A configurar após a resolução das dependências]"
 
 testing:
   framework: "nunit"
