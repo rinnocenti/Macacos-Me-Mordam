@@ -1,0 +1,26 @@
+# Configuração inicial do jogo.
+# Preferências de rigor não definidas; seguem a resolução do workspace de desenvolvimento.
+
+schema_version: 1
+
+platform:
+  targets: ["Mobile"]
+  primary_input: "Touch"
+  gamepad_support: "None"
+  touch_support: "Full"
+
+engine:
+  name: "Unity"
+  version: "6000.6.9f1"
+  language: "C#"
+  rendering: "URP"
+  physics: "Unity 2D Physics"
+
+commands:
+  build: "[A configurar após a escolha do alvo móvel]"
+  test: "[NUnit pretendido; execução a configurar]"
+  run: "[Abrir o projeto Macacos Me Mordam pelo Unity Hub]"
+  smoke: "[A configurar após validar a compilação no Editor]"
+
+testing:
+  framework: "nunit"
