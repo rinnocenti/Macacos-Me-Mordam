@@ -1,0 +1,19 @@
+{
+  "name": "MacacosMeMordam.Unity",
+  "rootNamespace": "MacacosMeMordam.Unity",
+  "references": [
+    "MacacosMeMordam.Gameplay",
+    "Immersive.Logging.Runtime",
+    "Immersive.Logging.Unity",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

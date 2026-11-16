@@ -5,21 +5,21 @@ Jogo mobile 2D de arcade frenético sobre um capitão pirata amaldiçoado e maca
 ## Estado do projeto
 
 - Unity 6000.6.9f1, C# e URP.
-- Mobile; Touch é a entrada principal, com suporte completo a toque. Gamepad: nenhum.
-- O sistema operacional móvel ainda não foi escolhido.
+- Android; Touch é a entrada principal, com suporte completo a toque. Gamepad: nenhum.
+- O Build Profile Android está ativo no Unity; ainda não foi gerado APK.
 - Este repositório contém a raiz do projeto Unity Universal 2D (URP).
-- O Editor resolveu `com.immersive.framework` 1.1.0 pelo OpenUPM; o lockfile registra também Foundation 0.2.2 e Logging 0.2.3.
-- NUnit é o framework de testes pretendido.
+- O projeto usa o checkout local `com.immersive.framework` 1.2.0; o lock resolve Composition 0.1.0-preview.3, Foundation 0.2.3 e Logging 0.2.4.
+- O Unity Test Runner mostrou 22/22 testes NUnit EditMode aprovados na execução feita pelo usuário.
 
 ## Base Immersive Framework
 
-O jogo consome o pacote oficial `com.immersive.framework` na versão estável 1.1.0, distribuída pelo OpenUPM. A documentação do pacote registra Unity 6000.5.0f1 como versão mínima; o projeto escolhido usa 6000.6.9f1, acima desse mínimo. O manifest e o lockfile registram o pacote e suas dependências. A compilação e o build ainda não foram validados.
+O jogo consome o checkout local do pacote `com.immersive.framework` 1.2.0 por `file:../../../../../ImmersivePackages/com.immersive.framework`. O checkout do pacote precisa existir nessa posição relativa ao manifest do jogo; ele não está incluído neste repositório. A Unity Package Manager aceita caminhos locais relativos ao manifest do projeto.
 
-O Framework é uma dependência do jogo. Não copie código ou arquitetura interna do pacote para este repositório. As regras próprias do jogo — viagens, surgimento e derrota dos macacos, peso, afundamento e coleta de relíquias — pertencem ao consumidor.
+O Framework é uma dependência do jogo. Não copie código ou arquitetura interna do pacote para este repositório. As regras próprias do jogo — viagens, surgimento e derrota dos macacos, peso, afundamento e coleta de relíquias — pertencem ao consumidor. A recompilação no Editor concluiu sem erros; o usuário confirmou a demonstração do loop e 22 testes EditMode aprovados. Não foi gerado APK nem validado em aparelho. A diferença entre Cinemachine 3.1.7 declarada pelo checkout local e 6.6.0 resolvida pelo lock permanece sem validação específica de runtime.
 
 ## Próxima etapa
 
-Validar a compilação no Editor. Depois, definir a arquitetura mínima do ciclo de viagem antes de criar scripts de gameplay.
+A demonstração mínima da campanha foi aceita pelo usuário. O próximo incremento é melhorar a apresentação mobile, começando pela legibilidade e exibição dos textos localizados da HUD em diferentes proporções de tela; em seguida, definir direção de arte e substituir os visuais temporários. O build Android e a validação em aparelho continuam pendentes.
 
 ## Documento de design
 

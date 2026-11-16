@@ -1,0 +1,23 @@
+{
+  "name": "MacacosMeMordam.Gameplay.Tests",
+  "rootNamespace": "MacacosMeMordam.Gameplay.Tests",
+  "references": [
+    "MacacosMeMordam.Gameplay"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": true,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4102af3d425c5ef408d0496d25946e4c, type: 3}
+  m_Name: CampaignLocalization.pt-BR
+  m_EditorClassIdentifier: MacacosMeMordam.Unity::MacacosMeMordam.Unity.CampaignLocalizationAsset
+  localeCode: pt-BR
+  entries:
+  - key: 0
+    value: Prepare-se para a viagem.
+  - key: 1
+    value: Navegando para a ilha
+  - key: 2
+    value: "Ilha alcan\xE7ada!"
+  - key: 3
+    value: O navio afundou
+  - key: 4
+    value: "Maldi\xE7\xE3o quebrada!"
+  - key: 5
+    value: Tentar novamente
+  - key: 6
+    value: Continuar
+  - key: 7
+    value: "Rel\xEDquias: {0}/{1}"

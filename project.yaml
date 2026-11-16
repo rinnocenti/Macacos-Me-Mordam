@@ -4,6 +4,7 @@
 schema_version: 1
 
 platform:
+  # O alvo da plataforma Mobile nesta fatia é Android.
   targets: ["Mobile"]
   primary_input: "Touch"
   gamepad_support: "None"
@@ -17,8 +18,8 @@ engine:
   physics: "Unity 2D Physics"
 
 commands:
-  build: "[A configurar após a escolha do alvo móvel]"
-  test: "[NUnit pretendido; execução a configurar]"
+  build: "[Build Profile Android ativo; comando do primeiro build ainda não validado]"
+  test: "[NUnit EditMode; 22 testes aprovados na execução manual do usuário]"
   run: "[Abrir o projeto Macacos Me Mordam pelo Unity Hub]"
   smoke: "[A configurar após validar a compilação no Editor]"
 
