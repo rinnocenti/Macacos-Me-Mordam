@@ -3,6 +3,7 @@
   "rootNamespace": "MacacosMeMordam.Unity",
   "references": [
     "MacacosMeMordam.Gameplay",
+    "Immersive.Framework.Runtime",
     "Immersive.Logging.Runtime",
     "Immersive.Logging.Unity",
     "UnityEngine.UI"

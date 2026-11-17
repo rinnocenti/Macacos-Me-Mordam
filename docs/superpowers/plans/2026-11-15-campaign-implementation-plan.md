@@ -26,6 +26,15 @@
 - Nenhum APK foi gerado nem testado em aparelho. O próximo corte de produto é corrigir legibilidade e layout responsivo da HUD; direção de arte e substituição dos visuais temporários vêm depois.
 - O Git Bash instalado falha dentro do sandbox padrão com `NtCreateDirectoryObject 0xC0000022`, mas `bash.exe --version` funciona em execução elevada. `CGS_BASH` pode selecionar o binário por processo; não foi alterada nenhuma permissão global.
 
+## Aditivo de integração UX aprovado (2026-11-17)
+
+A baseline aprovada em `design/ux/campaign-flow.md` substitui as decisões anteriores deste plano sobre pausa local e Retry direto. O Framework é a autoridade para Pause e para o ciclo de Activity; o jogo mantém as regras da tentativa e a semântica da recompensa.
+
+- O controller consulta um `PauseSnapshot` válido antes de avançar a viagem, aceitar toques ou emitir Continue. `OnApplicationPause(true)` encaminha um pedido ao `PauseRequestTrigger`; o jogo não mantém uma segunda variável de pausa nem altera `Time.timeScale`.
+- A sessão da campanha permanece no conteúdo da Route. O controller é um participante `IUnityResettable` sob um `Resettable` com membership `Activity`. Retry chama `ActivityRestartTrigger` com alvo `CurrentActivity`; a regra de Retry executa no Reset, preservando relíquias e índice, e a admissão só é liberada após sucesso terminal. Falhas permanecem bloqueadas e diagnosticadas.
+- A implementação desta sessão conecta controller, HUD e assembly às APIs do Framework. A autoria no Unity Editor ainda precisa adicionar/validar Pause Request Trigger, Activity Restart Trigger e Resettable no objeto Campaign Runtime, com membership Activity e alvo Current Activity.
+- A superfície visual de pausa, Android Back, menu/rotas e loading/fade permanecem nos próximos cortes. O projeto atual ainda não tem Route de menu para receber as transições compostas.
+
 ## Registro da execução inicial (2026-11-15)
 
 - Foram escritos o domínio puro de viagem/campanha, os assemblies, fontes NUnit e adaptadores de dados, toque, controller, board, HUD e catálogo localizado. Eles ainda não foram compilados nem testados no Unity.

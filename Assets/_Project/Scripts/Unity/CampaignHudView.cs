@@ -148,6 +148,7 @@ namespace MacacosMeMordam.Unity
             }
 
             controller.SnapshotChanged += Render;
+            controller.RetryRestartBlockedChanged += OnRetryRestartBlockedChanged;
             retryButton.onClick.AddListener(RequestRetry);
             continueButton.onClick.AddListener(RequestContinue);
             _subscribed = true;
@@ -162,6 +163,7 @@ namespace MacacosMeMordam.Unity
             }
 
             controller.SnapshotChanged -= Render;
+            controller.RetryRestartBlockedChanged -= OnRetryRestartBlockedChanged;
             retryButton.onClick.RemoveListener(RequestRetry);
             continueButton.onClick.RemoveListener(RequestContinue);
             _subscribed = false;
@@ -227,6 +229,7 @@ namespace MacacosMeMordam.Unity
             sunkPanel.SetActive(sunk);
             curseBrokenPanel.SetActive(curseBroken);
             retryButton.gameObject.SetActive(sunk);
+            retryButton.interactable = sunk && !controller.IsRetryRestartBlocked;
             continueButton.gameObject.SetActive(arrived);
 
             if (!_lastLoggedState.HasValue || _lastLoggedState.Value != campaign.State)
@@ -244,9 +247,21 @@ namespace MacacosMeMordam.Unity
             }
         }
 
-        private void RequestRetry() => controller.TryRetry();
+        private void RequestRetry() => controller.RequestRetry();
 
         private void RequestContinue() => controller.TryContinue();
+
+        private void OnRetryRestartBlockedChanged(bool blocked)
+        {
+            if (retryButton == null || controller == null || !controller.IsReady)
+            {
+                return;
+            }
+
+            retryButton.interactable =
+                !blocked &&
+                controller.Snapshot.State == CampaignState.ReadyForRetry;
+        }
 
         private bool TryGetText(CampaignTextKey key, out string text)
         {
