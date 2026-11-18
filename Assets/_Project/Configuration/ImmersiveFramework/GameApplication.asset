@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GameApplication
   m_EditorClassIdentifier: Immersive.Framework.Runtime::Immersive.Framework.Authoring.GameApplicationAsset
   applicationName: Macacos me mordam
-  startupRoute: {fileID: 11400000, guid: af3858c44b417df4bbaf8c4851cb3965, type: 2}
+  startupRoute: {fileID: 11400000, guid: a3def3772aa96fa40b30f381f80ffc03, type: 2}
   playerSessionEnabled: 0
   defaultPlayerSessionProfile: {fileID: 0}
   playerActorSelectionDuplicatePolicy: 10

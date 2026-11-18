@@ -413,8 +413,8 @@ namespace MacacosMeMordam.Unity
             snapshot = default;
             if (!_pauseSnapshotUnavailableReported)
             {
-                _logger?.Error(
-                    "Campaign gameplay is waiting for a valid Framework Pause snapshot.",
+                _logger?.Warning(
+                    "Campaign gameplay is waiting for a valid Framework Pause snapshot during Activity entry.",
                     LogFields.Field("sessionId", SessionId),
                     LogFields.Field("bindingStatus", _pauseRequestTrigger != null
                         ? _pauseRequestTrigger.ProductRequestBindingStatus
